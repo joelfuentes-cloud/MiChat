@@ -1,0 +1,23 @@
+services:
+  mensajeria:
+    image: python:3.11-alpine
+    container_name: servidor_chat
+    working_dir: /app
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - REDIS_HOST=base_datos
+    command: sh -c "pip install flask redis && python app.py"
+    depends_on:
+      - base_datos
+
+  base_datos:
+    image: redis:alpine
+    container_name: db_chat
+    volumes:
+      - datos_chat:/data
+
+volumes:
+  datos_chat:
