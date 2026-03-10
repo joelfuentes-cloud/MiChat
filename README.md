@@ -22,7 +22,6 @@ Para ejecutar este proyecto, solo necesitas tener instalado [Docker Desktop](htt
 
 1.  **Clona este repositorio** o descarga los archivos `app.py`, `Dockerfile` y `docker-compose.yml`.
 2.  **Abre una terminal** en la carpeta del proyecto.
-3.  **Lanza la aplicación** con el siguiente comando:
-
+3.  **Lanza la aplicación** con el siguiente comando: docker-compose up -d
+4. **Habre tu navegador** y pon http://localhost:5000
 ```bash
-docker-compose up -d
